@@ -1,0 +1,65 @@
+.about-intro{
+    background-image: url(https://wallpaper.dog/large/17206943.jpg);
+    height: 80vh; width: 100vw;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: top;
+margin: 0%;
+display: flex;
+align-items: center;
+margin: auto;
+}
+
+.first-header{
+    margin: auto;
+    margin: 0;
+    transform: rotate(-5deg);
+    border: 5px solid rgb(60, 68, 52);
+    box-shadow: 0px 5px 10px rgb(225, 252, 19);
+    text-shadow: 2px 2px 4px rgb(145, 26, 26);
+    background: linear-gradient(to right, #333399, #cc6600);
+    display: flex;
+    color: darkgrey;
+    font-size: 5rem;
+}
+
+@media only screen and (max-width: 700px) {
+    .first-header{
+      font-size: 2.3rem;
+    }
+  }
+
+
+
+
+.about-expantion{
+    height: 100vh;
+    width: 100vw;
+    background-color: gainsboro;
+}
+
+.minor-header-placement{
+    display: flex;
+    justify-content: center;
+}
+.minor-header{
+    display: flex;
+    margin: 0%;
+    
+    
+}
+
+
+.expantion-placement{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.expantion{
+display: flex;
+text-align: center;
+margin: auto;
+}
+
+
