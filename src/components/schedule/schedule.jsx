@@ -16,19 +16,21 @@ function Schedule(props) {
             field: 'playersSign',
             headerName: 'playersSign',
             width: 90,
-        },
+        }
+       
     ];
 
     const rows = props.games.map((game, index) => (
-{
-    id: index,
-    date: game.date,
-    court: game.court,
-    time: `${game.startTime}-${game.endTime}`,
-    playersSign: `${game.playersSign}/15`
-}
+        {
+            id: index,
+            date: game.date,
+            court: game.court,
+            time: `${game.startTime}-${game.endTime}`,
+            playersSign: `${game.playersSign}/15`,
+           
+        }
     ))
-    
+
 
     return (
         <div style={{ height: 400, width: '100%' }}>
