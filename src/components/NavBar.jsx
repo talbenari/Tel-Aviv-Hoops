@@ -3,6 +3,9 @@ import AppBar from '@mui/material/AppBar';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import SportsBasketballIcon from '@mui/icons-material/SportsBasketball';
 import { Stack } from '@mui/system';
+import { NavLink } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+import About from '../pages/About';
 
 function NavBar() {
 
@@ -25,10 +28,14 @@ function NavBar() {
                         <SportsBasketballIcon />
                         <Button variant="text" color='secondary'>Home</Button>
                         <Button variant="text" color='secondary'>Full Schedule</Button>
-                        <Button variant="text" color='secondary'>About</Button>
+                       <NavLink to="/About"> <Button variant="text" color='secondary'>About</Button></NavLink>
                     </Stack>
                 </Toolbar>
             </AppBar>
+<Routes>
+<Route path='/About' element={<About></About>}></Route>
+</Routes>
+        
         </ThemeProvider>
     )
 }
