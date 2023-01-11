@@ -1,0 +1,22 @@
+.tlvruning{
+    background-image: url(https://www.teahub.io/photos/full/344-3440808_tel-aviv-black-and-white.jpg);
+height: 100vh; width: 100vw;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: top;
+margin: 0%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.heading{
+    margin: 0;
+    font-size: 6.5rem;
+    transform: rotate(8deg);
+    color: rgb(180, 8, 8);
+}
+
+@media only screen and (max-width: 600px) {
+    .heading{ font-size: 4rem;}
+}
