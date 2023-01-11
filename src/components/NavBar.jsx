@@ -6,6 +6,7 @@ import { Stack } from '@mui/system';
 import { NavLink } from 'react-router-dom';
 import { Route, Routes } from 'react-router-dom';
 import About from '../pages/About';
+import Home from '../pages/Home';
 
 function NavBar() {
 
@@ -26,7 +27,7 @@ function NavBar() {
                 <Toolbar>
                     <Stack direction='row' alignItems='center' spacing={3}>
                         <SportsBasketballIcon />
-                        <Button variant="text" color='secondary'>Home</Button>
+                        <NavLink to="/"><Button variant="text" color='secondary'>Home</Button></NavLink>
                         <Button variant="text" color='secondary'>Full Schedule</Button>
                        <NavLink to="/About"> <Button variant="text" color='secondary'>About</Button></NavLink>
                     </Stack>
@@ -34,6 +35,7 @@ function NavBar() {
             </AppBar>
 <Routes>
 <Route path='/About' element={<About></About>}></Route>
+<Route path='/' element={<Home></Home>}></Route>
 </Routes>
         
         </ThemeProvider>
