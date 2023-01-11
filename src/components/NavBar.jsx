@@ -19,7 +19,7 @@ function NavBar() {
 
     return (
         <ThemeProvider theme={theme}>
-            <AppBar position="static">
+            <AppBar position="fixed">
                 <Toolbar>
                     <Stack direction='row' alignItems='center' spacing={3}>
                         <SportsBasketballIcon />
