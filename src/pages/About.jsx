@@ -10,7 +10,7 @@ function About() {
 
 
 <div className='about-expantion'>
-<div className='minor-header-placement'><h1 className='minor-header'><br/><br/>Ball for All</h1></div>
+<div className='minor-header-placement'><h1 className='minor-header'><br/>Ball for All</h1></div>
 
 
 <div className='expantion-placement'><p className='expantion'><br/><br/><br/>TLV-Hoops was founded in 2023 with one objective: to bring people<br/>
@@ -26,6 +26,21 @@ we call “BALL FOR ALL” and that mentality is what drives us to offer the<br/
 best basketball experience available today.</p></div>
 
 
+
+<div className='visual-aid-placement'>
+<img className='visual=aid' src="https://i0.wp.com/thisisbasketball.world/wp-content/uploads/2020/06/BeFunky-collage-773x380.jpg" alt="indoor game" /></div>
+
+<div className='visual-aid-placement-mobile'> <img src="https://i0.wp.com/hoopsterreport.com/wp-content/uploads/2020/06/getty-images-1179874223.jpg?resize=256%2C256&ssl=1" alt="playing game" /></div>
+
+
+<div className='second-minor-header-placement'><h1 className='second-minor-header'><br/>Giving Back</h1></div>
+
+<div className='second-expantion-placement'><p className='second-expantion'>Teamwork is an integral part of hoops,<br/>
+so in addition to “ball for all,” TLV-Hoops,<br/>
+a non profit organization, is also about<br/>
+assisting within the community.<br/>
+With every game you play, you<br/>
+are helping us with that mission.</p></div>
 
 
 </div>
