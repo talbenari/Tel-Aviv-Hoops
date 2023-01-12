@@ -1,27 +1,29 @@
 .rules-display{ 
-    background-image: url(https://img.freepik.com/premium-photo/basketball-floor-court-wood-parquet-lines-hardwood-floor_488220-8463.jpg?w=2000);
+    background-image: url(/Users/roygutter/Desktop/Full-Stuck/projects/Tel-Aviv-Hoops/src/UI/images/244135181_231288082349036_8970351012148601611_n.jpeg);
+    opacity: 87%; 
 height: 100vh; width: 100vw;
 background-repeat: no-repeat;
 background-size: cover;
-background-position: top;
-margin: 0%;
+
+
 }
+
 
 @media only screen and (max-width: 600px) {
   .rules-display{
     height: 140vh;
   }
 }
-
 .header{
  margin-top: 0%; 
       display: flex; 
       justify-content: center;
    font-family: 'Open Sans', sans-serif;
-    background-color: #363636;
+   padding-top: 8%;
+   font-weight: 350;
     color: white;
-    box-shadow: 7px 6px 5px rgba(49, 1, 1, 0.3);
-    font-size: 2.3rem;
+    /* box-shadow: 7px 6px 5px rgba(49, 1, 1, 0.3); */
+    font-size: 5rem;
 }
 
 .rules{
@@ -38,13 +40,15 @@ margin: 0%;
 }
 
 .images:hover ~ .text{
-  background-color: #f8f89e;
+  background-color: grey;
+  color: white;
   transform: translateY(-2px);
   box-shadow: 5px 5px 5px 3px rgba(0, 0, 0, 0.2);
 }
 
 .images:hover ~ .second-header{
-  background-color: #676b69;
+  background-color: grey;
+  color: white;
   transform: translateY(-2px);
   box-shadow: 10px 10px 4px 5px rgba(0, 0, 0, 0.2);
 }

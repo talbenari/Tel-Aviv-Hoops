@@ -6,7 +6,6 @@ return(
     <div className="rules-display">
 <h1 className="header">Rules & Regulations</h1>
 <div className="rules">
-
 <div className='combo'>
 <img className='images' src="https://indoorhoops.com/img/rules_icons/idh_rules_01-whistle.svg" alt="Whistle" />
 <h3 className='second-header'>No refs.</h3>

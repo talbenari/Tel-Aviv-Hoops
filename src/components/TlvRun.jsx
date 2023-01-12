@@ -1,10 +1,10 @@
 import './TlvRun.css'
 
-function TlvRun(){
-    return(
-<div className='tlvruning'>
-   <h1 className='heading'>WE'RE RUNNING IN TLV</h1>
-</div>
+function TlvRun() {
+    return (
+        <div className='tlvruning'>
+            <h1 className='heading'>LET'S RUN, TLV</h1>
+        </div>
     )
 }
 
