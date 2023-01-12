@@ -1,5 +1,5 @@
 .tlvruning{
-    background-image: url(https://www.teahub.io/photos/full/344-3440808_tel-aviv-black-and-white.jpg);
+    background-image: url(/Users/roygutter/Desktop/Full-Stuck/projects/Tel-Aviv-Hoops/src/UI/images/Tel-Aviv-Hoops.jpeg);
 height: 100vh; width: 100vw;
 background-repeat: no-repeat;
 background-size: cover;
@@ -8,13 +8,15 @@ margin: 0%;
 display: flex;
 align-items: center;
 justify-content: center;
+opacity: 90%; 
 }
 
 .heading{
-    margin: 0;
-    font-size: 6.5rem;
-    transform: rotate(8deg);
-    color: rgb(180, 8, 8);
+    padding-bottom: 15%;
+    font-size: 5rem;
+    font-weight: 400;
+    /* transform: rotate(8deg); */
+    color: WHITE
 }
 
 @media only screen and (max-width: 600px) {
