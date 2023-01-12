@@ -1,11 +1,11 @@
 import "../components/RulesDisplay"
 import RulesDisplay from "../components/RulesDisplay"
 import TlvRun from "../components/TlvRun"
-function Home(){
-    return(
+function Home() {
+    return (
         <div>
-<TlvRun></TlvRun>
-        <RulesDisplay></RulesDisplay>
+            <TlvRun></TlvRun>
+            <RulesDisplay></RulesDisplay>
         </div>
     )
 }
