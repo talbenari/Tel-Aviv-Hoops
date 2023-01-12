@@ -1,0 +1,142 @@
+.about-intro{
+    background-image: url(https://wallpaper.dog/large/17206943.jpg);
+    height: 80vh; width: 100vw;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: top;
+margin: 0%;
+display: flex;
+align-items: center;
+margin: auto;
+}
+
+.first-header{
+    margin: auto;
+    margin: 0;
+    transform: rotate(-5deg);
+    border: 5px solid rgb(60, 68, 52);
+    box-shadow: 0px 5px 10px rgb(225, 252, 19);
+    text-shadow: 2px 2px 4px rgb(145, 26, 26);
+    background: linear-gradient(to right, #333399, #cc6600);
+    display: flex;
+    color: darkgrey;
+    font-size: 5rem;
+}
+
+@media only screen and (max-width: 700px) {
+    .first-header{
+      font-size: 2.3rem;
+    }
+    .expantion{
+        font-size: 1rem;
+    }
+    .second-expantion{
+        font-size: 1.2rem;
+    }
+  }
+
+
+
+
+.about-expantion{
+    height: 265vh;
+    width: 100vw;
+    background-color: gainsboro;
+}
+
+.minor-header-placement{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+}
+.minor-header{
+    display: flex;
+    margin: 0%;
+    font-family: 'Open Sans', sans-serif;
+    color: darkslategray;
+    text-shadow: 2px 2px 4px rgb(6, 34, 144);
+}
+
+
+.expantion-placement{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.expantion{
+display: flex;
+text-align: center;
+margin: auto;
+background:  linear-gradient(to bottom, #7c9b0b, #cc6600);
+font-size: 1.5rem;
+}
+
+
+.visual-aid-placement{
+  display: flex;
+ justify-content: center;
+ margin-top: 10%;
+}
+
+.visual-aid{
+    display: flex;
+}
+
+@media only screen and (max-width: 773px) {
+.visual-aid-placement{display: none;}
+}
+
+.visual-aid-placement-mobile{
+   display: none;
+  }
+
+  @media only screen and (max-width: 773px) {
+    .visual-aid-placement-mobile{
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+    }
+  }
+
+
+  .second-minor-header-placement{
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+}
+.second-minor-header{
+    display: flex;
+    margin: 0%;
+    font-family: 'Open Sans', sans-serif;
+    color: darkslategray;
+    text-shadow: 2px 2px 4px rgb(6, 34, 144);
+}
+
+
+.second-expantion-placement{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.second-expantion{
+display: flex;
+text-align: center;
+margin: auto;
+background:  linear-gradient(to top, #9b0d0b, #cc6600);
+font-size: 1.8rem;
+} 
+
+@media only screen and (max-width: 600px) {
+    .second-minor-header-placemen{
+        font-size: 1.8rem;
+    }
+    .second-minor-header{
+        font-size: 1.8rem;
+    }
+    .about-expantion{
+        height: 320vh;
+    }
+}
+

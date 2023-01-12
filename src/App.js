@@ -1,14 +1,19 @@
 import "./App.css";
 import React from "react";
-import GetGamesData from "./components/schedule/GetGamesData";
-import Schedule from "./components/schedule/Schedule";
+import Footer from './components/Footer';
+import NavBar from './components/NavBar';
+
+
 
 function App() {
   return (
     <div className="App">
-      <GetGamesData />
+      <NavBar />
+
+      <Footer />
     </div>
   );
 }
 
 export default App;
+
