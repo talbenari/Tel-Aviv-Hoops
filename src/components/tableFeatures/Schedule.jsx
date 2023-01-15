@@ -89,12 +89,21 @@ import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import { Button, Typography } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { NavLink } from 'react-router-dom';
+import ClearIcon from '@mui/icons-material/Clear';
+// import { NavLink } from 'react-router-dom';
 import InfoCard from './InfoCard';
+
 import styles from './Schedule.css'
 
 
+import './infoCard.css';
+import { useState } from 'react';
+
+
 function Schedule(props) {
+
+    const [displayType, setDisplayType] = useState('none');
+    const [currentRow, setCurrentRow] = useState();
 
     const theme = createTheme({
         palette: {
@@ -119,6 +128,7 @@ function Schedule(props) {
             field: '', width: 150, headerClassName: 'title', cellClassName: 'cells', renderCell: ({ row }) => {
                 if (row.playersSign === '15/15') {
                     return <ThemeProvider theme={theme}>
+
                         <NavLink to='/card' style={{ textDecoration: 'none' }}>
                             <Button variant='contained' color='secondary' style={{ width: theme.xs.width }}>
                                 <Typography variant='caption'>
@@ -135,12 +145,15 @@ function Schedule(props) {
                                 <InfoCard />
                             </div>
 
+
                         }}>
                             <Typography variant='caption'>
                                 Join Game
                             </Typography>
                         </Button>
+
                         {/* </NavLink> */}
+
                     </ThemeProvider>
                 }
             }
@@ -158,10 +171,18 @@ function Schedule(props) {
 
         }
     ))
+
     const newRows = rows.slice(5);
+
 
     return (
         <div style={{ height: 400, width: '100%' }}>
+            <div id='blurryBackGround' style={{ display: `${displayType}`, position: 'absolute', width: '100%', height: '100%' }}>
+                <div style={{ display: `${displayType}`, position: 'absolute', float: 'center' }}>
+                    <button onClick={() => setDisplayType('none')}><ClearIcon /></button>
+                    <InfoCard court={currentRow && currentRow.court} date={currentRow && currentRow.date} time={currentRow && currentRow.time} players={currentRow && currentRow.playersSign} />
+                </div>
+            </div>
             <DataGrid
                 rows={newRows}
                 columns={columns}
