@@ -12,6 +12,9 @@ function Footer() {
 
 
     const theme = createTheme({
+        typography: {
+            fontFamily: 'Comic sans Ms'
+        },
         palette: {
             primary: {
                 main: '#424242',
@@ -24,7 +27,7 @@ function Footer() {
 
     return (
         <ThemeProvider theme={theme}>
-            <AppBar position='static' style={{ bottom: 0, height: 500, width: "100vw"}}>
+            <AppBar position='static' style={{ bottom: 0, height: 500, width: "100vw" }}>
                 <Toolbar style={{ height: '100%', justifyContent: 'space-evenly', alignItems: 'center', flexDirection: 'column' }}>
                     {/* <iframe src="https://storage.googleapis.com/maps-solutions-s3j131omlq/locator-plus/j6l6/locator-plus.html"
                         width="100%" height="100%"

@@ -1,4 +1,4 @@
-import { Button, Toolbar } from '@mui/material';
+import { Button, Toolbar, Typography } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import SportsBasketballIcon from '@mui/icons-material/SportsBasketball';
@@ -11,6 +11,9 @@ import Home from '../pages/Home';
 function NavBar() {
 
     const theme = createTheme({
+        typography: {
+            fontFamily: 'Comic sans Ms'
+        },
         palette: {
             primary: {
                 main: '#424242',
@@ -18,6 +21,8 @@ function NavBar() {
             secondary: {
                 main: '#fff'
             }
+
+
         },
     });
 
@@ -29,15 +34,15 @@ function NavBar() {
                         <SportsBasketballIcon />
                         <NavLink to="/"><Button variant="text" color='secondary'>Home</Button></NavLink>
                         <Button variant="text" color='secondary'>Full Schedule</Button>
-                       <NavLink to="/About"> <Button variant="text" color='secondary'>About</Button></NavLink>
+                        <NavLink to="/About"> <Button variant="text" color='secondary'>About</Button></NavLink>
                     </Stack>
                 </Toolbar>
             </AppBar>
-<Routes>
-<Route path='/About' element={<About></About>}></Route>
-<Route path='/' element={<Home></Home>}></Route>
-</Routes>
-        
+            <Routes>
+                <Route path='/About' element={<About></About>}></Route>
+                <Route path='/' element={<Home></Home>}></Route>
+            </Routes>
+
         </ThemeProvider>
     )
 }

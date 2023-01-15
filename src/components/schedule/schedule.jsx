@@ -4,6 +4,7 @@ import { CacheProvider } from '@emotion/react';
 import createCache from '@emotion/cache';
 import { type } from '@testing-library/user-event/dist/type';
 import { ThemeProvider, createTheme, Typography } from '@mui/material';
+import styles from './Schedule.css'
 
 
 
@@ -23,28 +24,14 @@ function Schedule(props) {
 
 
     const columns = [
-        { field: 'date', headerName: 'Day', width: 150 },
-        { field: 'court', headerName: 'Court', width: 130 },
-        { field: 'time', headerName: 'Time', width: 130 },
+        { field: 'date', headerName: 'Day', width: 250, headerClassName: 'title', cellClassName: 'cells' },
+        { field: 'court', headerName: 'Court', width: 250, headerClassName: 'title', cellClassName: 'cells' },
+        { field: 'time', headerName: 'Time', width: 250, headerClassName: 'title', cellClassName: 'cells' },
         {
             field: 'playersSign',
             headerName: 'playersSign',
-            width: 90,
+            width: 250, headerClassName: 'title', cellClassName: 'cells'
         },
-        // {
-        //     field: "PLAY",
-        //     renderCell: (cellValues) => {
-        //         return (
-        //             <Button
-        //                 variant="contained"
-        //                 color="primary"
-        //                 onClick={(event) => {
-        //                     hendleClick(event, cellValues)
-        //                 }}>Play</Button>
-        //         )
-        //     }
-        // }
-
 
     ];
 
@@ -64,7 +51,7 @@ function Schedule(props) {
     const theme = createTheme({
         typography: {
 
-            fontSize: 15,
+            fontSize: 20,
         },
     });
     return (
@@ -73,12 +60,15 @@ function Schedule(props) {
                 <CacheProvider value={cache}>
 
 
-                    <div style={{ height: 400, width: '100%' }}>
+                    <div className='table' style={{ height: 500, width: '90vw' }}>
                         <DataGrid
+                            className='table'
                             rows={newRows}
                             columns={columns}
                             pageSize={5}
-                            rowsPerPageOptions={[0]}
+                            rowsPerPageOptions={[5]}
+                            rowHeight={70}
+
                         />
                     </div>
                 </CacheProvider>

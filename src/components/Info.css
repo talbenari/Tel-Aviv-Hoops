@@ -30,19 +30,20 @@ text-align: center;
      margin: 2%;
      text-align: center;
 }
-@media screen and (max-width: 768px){
-    .stats{
+@media screen and (max-width: 600px){
+    /* .stats{
      font-size: 8rem;
         display: flex;
         flex-direction: row;
-    }
+    } */
     .list h1{
         font-size: 1.5rem;
         }
-        .list li{
-            font-size: 1rem;
+        .list {
+            height: 45vh;
         }
         .list  p{
-            font-size: 1rem;
+            font-size: 0.9rem;
         }
+
 }

@@ -22,10 +22,12 @@ const Info = () => {
 
                 </div>
                 <div class="list">
-                    <h1>About Us</h1>
-                    <p>OUR VISION IS TO HOOP ANYDAY WITH MANY PLAYERS' AROUND ALL LEVELS AND AGES. INDOOR COURTS, GOOD BASKETBALL, AND GOOD VIBES!
-                        MORE TO COME SOON
-                    </p>
+                    <h1>Our Vision</h1>
+                    <p>OUR VISION IS TO HOOP ANYDAY
+                    WITH MANY PLAYERS' AROUND</p>
+                    <p>ALL LEVELS AND AGES. INDOOR COURTS, GOOD BASKETBALL, AND GOOD VIBES!   </p>
+                     <p>  MORE TO COME SOON</p> 
+                 
                 </div>
             </div>
         </div>

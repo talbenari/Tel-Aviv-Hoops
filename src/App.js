@@ -5,18 +5,33 @@ import NavBar from "./components/NavBar";
 import Info from "./components/Info";
 import FullSchedule from "./components/schedule/FullSchedule";
 import GetGamesData from "./components/schedule/GetGamesData";
+import {
+  ThemeProvider,
+  createTheme,
+  Typography,
+  withTheme,
+} from "@mui/material";
+import { CenterFocusStrong } from "@mui/icons-material";
 
 function App() {
+  const mainTheme = createTheme({
+    typography: {
+      color: withTheme,
+      fontFamily: "Comic sans Ms",
+      fontSize: 40,
+    },
+  });
   return (
-    <div className="App">
-      <NavBar />
-      <br />
+    <ThemeProvider theme={mainTheme}>
+      <div className="App">
+        <NavBar />
+        <br />
 
-      <GetGamesData />
-      <br />
-      <Footer />
-     
-    </div>
+        <GetGamesData />
+        <br />
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 }
 
