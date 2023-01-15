@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom';
 import { Route, Routes } from 'react-router-dom';
 import About from '../pages/About';
 import Home from '../pages/Home';
-import InfoCard from './tableFeatures/InfoCard';
+// import InfoCard from './tableFeatures/InfoCard';
 
 function NavBar() {
 
@@ -40,7 +40,7 @@ function NavBar() {
                 </Toolbar>
             </AppBar>
             <Routes>
-                <Route path='/card' element={<InfoCard></InfoCard>} />
+                {/* <Route path='/card' element={<InfoCard></InfoCard>} /> */}
                 <Route path='/About' element={<About></About>}></Route>
                 <Route path='/' element={<Home></Home>}></Route>
             </Routes>
