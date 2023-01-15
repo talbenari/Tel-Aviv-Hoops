@@ -3,10 +3,9 @@ import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import { Button, Typography } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-// import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import InfoCard from './InfoCard';
-import './infoCard.css';
-import { useState } from 'react';
+
 
 function Schedule(props) {
     console.log(props.games[0].courtSrc);
@@ -37,29 +36,29 @@ function Schedule(props) {
             field: '', width: 150, renderCell: ({ row }) => {
                 if (row.playersSign === '15/15') {
                     return <ThemeProvider theme={theme}>
-                        {/* <NavLink to='/card' style={{ textDecoration: 'none' }}> */}
-                        <Button variant='contained' color='secondary' style={{ width: theme.xs.width }} onClick={() => {
-                            setDisplayType('flex');
-                            setCurrentRow(row);
-
-                        }}>
-                            <Typography variant='caption'>
-                                Join Wait-list
-                            </Typography>
-                        </Button>
-                        {/* </NavLink> */}
+                        <NavLink to='/card' style={{textDecoration: 'none'}}>
+                            <Button variant='contained' color='secondary' style={{width: theme.xs.width}}>
+                                <Typography variant='caption'>
+                                    Join Wait-list
+                                </Typography>
+                            </Button>
+                        </NavLink>
                     </ThemeProvider>
                 } else {
                     return <ThemeProvider theme={theme}>
-                        <Button variant='contained' style={{ width: theme.xs.width }} onClick={() => {
-                            setDisplayType('flex');
-                            setCurrentRow(row);
+                    {/* <NavLink to='/card' style={{textDecoration: 'none'}}> */}
+                        <Button variant='contained' style={{width: theme.xs.width}} onClick={() => {
+                            return <div style={{position: 'absolute', alignSelf: 'center', justifySelf: 'center'}}>
+                                    <InfoCard/>
+                                </div>
+                            
                         }}>
                             <Typography variant='caption'>
                                 Join Game
                             </Typography>
                         </Button>
-                    </ThemeProvider>
+                    {/* </NavLink> */}
+                </ThemeProvider>
                 }
             }
         }
@@ -90,6 +89,27 @@ function Schedule(props) {
                 pageSize={8}
                 rowsPerPageOptions={[5]}
             />
+            <div style={{height: 30, width:'100%', position:'absolute',zIndex:2, palette: {
+                primary: {
+                    main: '#bf360c',
+                },
+                secondary: {
+                    main: '#bdbdbd'
+                }
+            },}}>
+            <ThemeProvider theme={theme}>
+                <NavLink to="/fullschedule"> 
+                <Button variant='contained' color='success' >
+                    <Typography variant='caption'>
+                        Full Schedule
+                    </Typography>
+                </Button>
+                </NavLink>
+            </ThemeProvider>
+                <Routes>
+                    <Route path="/fullschedule" element={<FullSchedule></FullSchedule>}></Route>
+                </Routes>
+            </div>
         </div>
     );
 };
