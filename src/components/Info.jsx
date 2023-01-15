@@ -2,12 +2,12 @@ import './Info.css';
 
 const Info = () => {
     return (
-        <div className="seacond-container">
-            <div className="stats">
-                <div className="list">
-                    <h1>How It's Work?</h1>
+        <div class="container">
+            <div class="stats">
+                <div class="list">
+                    <h1>How It Work's?</h1>
                     <p>EXPLORE OUR SCEDULE</p>
-                    <p>BOOK YOUR COURT, DATE, TIME AND LEVEL</p>
+                    <p>BOOK YOUR COURT, DATE AND TIME </p>
                     <p>ARRIVE ON TIME AND HAVE FUN</p>
 
                 </div>
@@ -21,11 +21,13 @@ const Info = () => {
 
 
                 </div>
-                <div className="list">
-                    <h1>About Us</h1>
-                    <p>OUR VISION IS TO HOOP ANYDAY WITH MANY PLAYERS' AROUND ALL LEVELS AND AGES. INDOOR COURTS, GOOD BASKETBALL, AND GOOD VIBES!
-                        MORE TO COME SOON
-                    </p>
+                <div class="list">
+                    <h1>Our Vision</h1>
+                    <p>OUR VISION IS TO HOOP ANYDAY
+                        WITH MANY PLAYERS' AROUND</p>
+                    <p>ALL LEVELS AND AGES. INDOOR COURTS, GOOD BASKETBALL, AND GOOD VIBES!   </p>
+                    <p>  MORE TO COME SOON</p>
+
                 </div>
             </div>
         </div>

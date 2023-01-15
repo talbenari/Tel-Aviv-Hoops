@@ -12,6 +12,9 @@ function Footer() {
 
 
     const theme = createTheme({
+        typography: {
+            fontFamily: 'Comic sans Ms'
+        },
         palette: {
             primary: {
                 main: '#424242',
@@ -24,7 +27,7 @@ function Footer() {
 
     return (
         <ThemeProvider theme={theme}>
-            <AppBar position='static' style={{ bottom: 0, height: 500, width: "100vw"}}>
+            <AppBar position='static' style={{ bottom: 0, height: 500, width: "100vw" }}>
                 <Toolbar style={{ height: '100%', justifyContent: 'space-evenly', alignItems: 'center', flexDirection: 'column' }}>
                     <Stack direction="row" spacing={8}>
                         <Button variant='' style={{ borderRadius: 20 }}><a target='blank' href='https://www.instagram.com/accounts/login/' color='white'><InstagramIcon /></a></Button>

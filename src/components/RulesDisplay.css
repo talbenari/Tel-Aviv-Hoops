@@ -1,24 +1,19 @@
 .rules-display{ 
     background-image: url(/src/UI/images/244135181_231288082349036_8970351012148601611_n.jpeg);
     opacity: 87%; 
-height: 100vh; width: 100vw;
+height: 90vh; width: 100vw;
 background-repeat: no-repeat;
 background-size: cover;
 
-
 }
 
 
-@media only screen and (max-width: 600px) {
-  .rules-display{
-    height: 140vh;
-  }
-}
+
 .header{
  margin-top: 0%; 
       display: flex; 
       justify-content: center;
-   font-family: 'Open Sans', sans-serif;
+   font-family: Comic sans Ms;
    padding-top: 8%;
    font-weight: 350;
     color: white;
@@ -28,14 +23,16 @@ background-size: cover;
 
 .rules{
     display: flex;
-    justify-content: space-between;
+    justify-content:space-around;
     flex-wrap: wrap;
     align-items: baseline;
     margin-top: 8% ;
+    
 }
+
 .images{
-    height: 5rem;
-    width: 5em;
+     height: 5rem; 
+     width: 5rem; 
     transition: all 0.2s ease-in-out;
 }
 
@@ -44,6 +41,7 @@ background-size: cover;
   color: white;
   transform: translateY(-2px);
   box-shadow: 5px 5px 5px 3px rgba(0, 0, 0, 0.2);
+  margin-top: 5%;
 }
 
 .images:hover ~ .second-header{
@@ -51,6 +49,7 @@ background-size: cover;
   color: white;
   transform: translateY(-2px);
   box-shadow: 10px 10px 4px 5px rgba(0, 0, 0, 0.2);
+  margin-top: 5%;
 }
 
 .second-header{
@@ -60,22 +59,26 @@ font-weight: bold;
 display: flex; 
 align-items: center;
 padding: 0.4rem 6px;
-font-family: 'Montserrat', sans-serif;
+font-family: Comic sans Ms;
   font-weight: 550;
   text-align: center;
 }
 
 .text{
-    font-family: 'Open Sans', sans-serif;
+    font-family: Comic sans Ms;
     font-size: 0.98rem;
     line-height: 1.5;
     font-weight: 150;
-    color: #555;
+    color: white;
     text-align: justify;
-  
+
+}
+img{
+justify-content: center;
 }
 
-.button {
+
+/* .button {
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     font-weight: 600;
@@ -89,15 +92,30 @@ font-family: 'Montserrat', sans-serif;
     color: rgb(98, 96, 96);
     margin: auto;
     margin-top: 10%;
-  }
+  } */
   
-  .button:hover {
+  /* .button:hover {
     background-color: #e28b27;
     transform: translateY(-2px);
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-  }
+  } */
 
-  .button-placement{
+  /* .button-placement{
     display: flex;
-  }
+  } */
   
+  @media only screen and (max-width: 600px) {
+    .rules-display{
+      height: 100vh;
+      
+      justify-content: center;
+      flex-direction: row;
+    }
+    .header{
+      font-size: 2.5em;
+    }
+    .text{
+ font-size: 0.9rem;
+    
+  }
+  }

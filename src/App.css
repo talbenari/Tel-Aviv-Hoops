@@ -1,5 +1,7 @@
-body {
+.App {
     margin-top: 6vh;
     background-color: grey;
-    font-family: bradley hand,cursive;
+    font-family: Comic sans Ms;
+    color: white;
+
 }

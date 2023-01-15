@@ -1,4 +1,4 @@
-import { Button, Toolbar } from '@mui/material';
+import { Button, Toolbar, Typography } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import SportsBasketballIcon from '@mui/icons-material/SportsBasketball';
@@ -12,6 +12,9 @@ import InfoCard from './tableFeatures/InfoCard';
 function NavBar() {
 
     const theme = createTheme({
+        typography: {
+            fontFamily: 'Comic sans Ms'
+        },
         palette: {
             primary: {
                 main: '#424242',
@@ -19,6 +22,8 @@ function NavBar() {
             secondary: {
                 main: '#fff'
             }
+
+
         },
     });
 
