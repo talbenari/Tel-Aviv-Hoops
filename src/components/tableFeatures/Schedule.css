@@ -1,13 +1,16 @@
 
 .title{
     font-size: 2rem;
-    background-color: black;
+
     font-family: Comic sans Ms;
     color: white;
 }
 .cells{
     font-family: Comic sans Ms;
     color: white;
+}
+.button{
+    font-family: Comic sans Ms;
 }
 
 .table{
