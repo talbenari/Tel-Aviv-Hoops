@@ -1,6 +1,6 @@
 .tlvruning{
     background-image: url(/Users/roygutter/Desktop/Full-Stuck/projects/Tel-Aviv-Hoops/src/UI/images/Tel-Aviv-Hoops.jpeg);
-height: 75vh; width: 100vw;
+height: 82vh; width: 100vw;
 background-repeat: no-repeat;
 background-size: cover;
 background-position: top;
@@ -12,7 +12,7 @@ opacity: 70%;
 }
 
 .heading{
-    padding-bottom: 20%;
+    padding-bottom: 9%;
     font-size: 5rem;
     font-weight: 600;
     /* transform: rotate(8deg); */

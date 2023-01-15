@@ -3,7 +3,7 @@ import { DataGrid } from '@mui/x-data-grid';
 import { CacheProvider } from '@emotion/react';
 import createCache from '@emotion/cache';
 import { type } from '@testing-library/user-event/dist/type';
-import { ThemeProvider, createTheme, Typography } from '@mui/material';
+import { ThemeProvider, createTheme, Typography, Button } from '@mui/material';
 import styles from './Schedule.css'
 
 
@@ -32,6 +32,9 @@ function Schedule(props) {
             headerName: 'playersSign',
             width: 250, headerClassName: 'title', cellClassName: 'cells'
         },
+        {
+
+        }
 
     ];
 
@@ -68,6 +71,7 @@ function Schedule(props) {
                             pageSize={5}
                             rowsPerPageOptions={[5]}
                             rowHeight={70}
+
 
                         />
                     </div>
