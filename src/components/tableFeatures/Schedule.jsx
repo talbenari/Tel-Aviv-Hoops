@@ -2,13 +2,13 @@ import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import { Button, Typography } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import ClearIcon from '@mui/icons-material/Clear';
 // import { NavLink } from 'react-router-dom';
 import InfoCard from './InfoCard';
 import './infoCard.css';
 import { useState } from 'react';
 
 function Schedule(props) {
+    console.log(props.games[0].courtSrc);
 
     const [displayType, setDisplayType] = useState('none');
     const [currentRow, setCurrentRow] = useState();
@@ -72,16 +72,15 @@ function Schedule(props) {
             court: game.court,
             time: `${game.startTime}-${game.endTime}`,
             playersSign: `${game.playersSign}/15`,
-
+            courtSrc: game.courtSrc
         }
     ))
 
     return (
         <div style={{ height: 400, width: '100%' }}>
-            <div id='blurryBackGround' style={{ display: `${displayType}`, position: 'absolute', width: '100%', height: '100%' }}>
-                <div style={{ display: `${displayType}`, position: 'absolute', float: 'center' }}>
-                    <button onClick={() => setDisplayType('none')}><ClearIcon /></button>
-                    <InfoCard court={currentRow && currentRow.court} date={currentRow && currentRow.date} time={currentRow && currentRow.time} players={currentRow && currentRow.playersSign} />
+            <div id='blurryBackGround' style={{ display: `${displayType}` }}>
+                <div style={{ display: `${displayType}`, position: 'absolute' }}>
+                    <InfoCard setDisplayType={setDisplayType} courtSrc={currentRow && currentRow.courtSrc} court={currentRow && currentRow.court} date={currentRow && currentRow.date} time={currentRow && currentRow.time} players={currentRow && currentRow.playersSign} />
                 </div>
             </div>
             <DataGrid
