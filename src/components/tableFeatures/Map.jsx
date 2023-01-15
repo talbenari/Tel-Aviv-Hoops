@@ -5,7 +5,7 @@ function Map() {
 
     return (
         <iframe 
-        title=""
+        title="myFrame"
         width="350" 
         height="300" 
         id="gmap_canvas" 
