@@ -12,6 +12,8 @@ import {
 } from "@mui/material";
 import { CenterFocusStrong } from "@mui/icons-material";
 
+import FullSchedule from "./components/tableFeatures/FullSchedule";
+import GetGamesData from "./components/tableFeatures/GetGamesData";
 
 function App() {
   // const mainTheme = createTheme({
@@ -24,9 +26,8 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <br />
-      <GetGamesData />
-      <br />
+     
+     
       <Footer />
     </div>
   );
