@@ -1,4 +1,4 @@
-import { Button, Card, Toolbar } from '@mui/material';
+import { Button, Toolbar } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import SportsBasketballIcon from '@mui/icons-material/SportsBasketball';
