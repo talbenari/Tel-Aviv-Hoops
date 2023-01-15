@@ -22,16 +22,18 @@ function App() {
     },
   });
   return (
-    <ThemeProvider theme={mainTheme}>
-      <div className="App">
-        <NavBar />
-        <br />
-
-        <GetGamesData />
-        <br />
-        <Footer />
-      </div>
-    </ThemeProvider>
+    <div className="App">
+      <NavBar />
+      <br />
+      <GetGamesData />
+      <br />
+      <Footer />
+      {/* <Routes>
+        <Route path="*" element={<NavBar />} />
+        <Route path="*" element={<GetGamesData />} />
+        <Route path="*" element={<Footer />} />    
+      </Routes> */}
+    </div>
   );
 }
 

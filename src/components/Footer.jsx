@@ -29,11 +29,6 @@ function Footer() {
         <ThemeProvider theme={theme}>
             <AppBar position='static' style={{ bottom: 0, height: 500, width: "100vw" }}>
                 <Toolbar style={{ height: '100%', justifyContent: 'space-evenly', alignItems: 'center', flexDirection: 'column' }}>
-                    {/* <iframe src="https://storage.googleapis.com/maps-solutions-s3j131omlq/locator-plus/j6l6/locator-plus.html"
-                        width="100%" height="100%"
-                        style={{border:0}}
-                        loading="lazy">
-                    </iframe> */}
                     <Stack direction="row" spacing={8}>
                         <Button variant='' style={{ borderRadius: 20 }}><a target='blank' href='https://www.instagram.com/accounts/login/' color='white'><InstagramIcon /></a></Button>
                         <Button variant='' style={{ borderRadius: 20 }}><a target='blank' href='https://www.facebook.com/'><FacebookIcon /></a></Button>

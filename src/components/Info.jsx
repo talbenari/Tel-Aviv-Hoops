@@ -1,4 +1,4 @@
-import styles from './Info.css'
+import './Info.css';
 
 const Info = () => {
     return (
@@ -11,7 +11,7 @@ const Info = () => {
                     <p>ARRIVE ON TIME AND HAVE FUN</p>
 
                 </div>
-                <div class="list">
+                <div className="list">
                     <h1>Our Courts</h1>
                     <p>HADAR YOSEF</p>
                     <p>MIDTOWN TLV</p>
