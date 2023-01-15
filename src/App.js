@@ -28,11 +28,6 @@ function App() {
       <GetGamesData />
       <br />
       <Footer />
-      {/* <Routes>
-        <Route path="*" element={<NavBar />} />
-        <Route path="*" element={<GetGamesData />} />
-        <Route path="*" element={<Footer />} />    
-      </Routes> */}
     </div>
   );
 }
