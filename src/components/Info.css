@@ -3,10 +3,10 @@
     /* position: absolute; */
     border: 4px solid white;
     width: 30vw;
-    height: 55vh;
+    height: 38vh;
     text-align: center;
     color: white;
-    margin: 0;
+    margin: auto;
     background-color: grey;
     display: flex;
     flex-direction: column;
@@ -21,7 +21,7 @@ text-align: center;
     text-align: center;
 }
 .list  p{
-    font-size: 1.3rem;
+    font-size: 1.0rem;
     text-align: center;
 }
 .stats{
@@ -30,6 +30,7 @@ text-align: center;
      justify-content: space-around; 
      margin: 2%;
      text-align: center;
+     height: 40vh;
 }
 @media screen and (max-width: 600px){
 
@@ -38,10 +39,16 @@ text-align: center;
         font-size: 1.5rem;
         }
         .list {
-            height: 55vh;
+            height: 37vh;
+            margin: auto;
+        }
+        .stats{
+        
+            height: 40vh;
+            
         }
         .list  p{
-            font-size: 0.9rem;
+            font-size: 0.7rem;
         }
 
 }
