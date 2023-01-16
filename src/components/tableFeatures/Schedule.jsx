@@ -91,7 +91,7 @@ function Schedule(props) {
     ))
 
     return (
-        // <ThemeProvider theme={theme}>
+
         <div style={{ height: 400, width: '98%', margin: 'auto', }}>
             <div id='blurryBackGround' style={{ display: `${displayType}` }}>
                 <div style={{ display: `${displayType}`, position: 'absolute', float: 'center' }}>
@@ -107,8 +107,7 @@ function Schedule(props) {
                 rows={rows}
                 columns={columns}
 
-                // pageSize={5}
-                // rowsPerPageOptions={[5]}
+
                 getRowSpacing={params => ({
                     top: params.isFirstVisible ? 0 : 5,
                     bottom: params.isLastVisible ? 0 : 5
@@ -121,19 +120,8 @@ function Schedule(props) {
 
 
             />
-            <div style={{
-                height: 30, width: '100%', position: 'absolute', zIndex: 2, palette: {
-                    primary: {
-                        main: '#bf360c',
-                    },
-                    secondary: {
-                        main: '#bdbdbd'
-                    }
-                },
-            }}>
-            </div>
-        </div>
-        // </ThemeProvider>
+        </div >
+
     );
 };
 

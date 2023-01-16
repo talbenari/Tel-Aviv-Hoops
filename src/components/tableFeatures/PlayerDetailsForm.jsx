@@ -1,21 +1,15 @@
 import React from 'react'
 import { useState } from 'react'
-// import styles from './PlayerDetailsForm.css'
+import styles from './PlayerDetailsForm.css'
 import { Button, Input } from '@mui/material'
+import { useForm } from "react-hook-form";
+
+
+
 const PlayerDetailsForm = () => {
+    const { register, handleSubmit, setValue } = useForm();
 
-    const [details, setDetails] = useState({
-        fullName: '',
-        Phone: '',
-        email: '',
-        Id: Math.random()
-
-    })
-
-    const PostData = async (e) => {
-        e.preventDefault();
-
-        const { fullName, Phone, email, Id } = details;
+    const onSubmit = async data => {
 
         const res = await fetch("https://tlv-hoops-inputs-default-rtdb.europe-west1.firebasedatabase.app/PlayersData.json",
             {
@@ -23,34 +17,39 @@ const PlayerDetailsForm = () => {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({
-                    fullName,
-                    Phone,
-                    email,
-                    Id
-
-                })
+                body: JSON.stringify({ ...data, Id: Math.random() })
             })
-
-    }
+        setValue("fullName", "");
+        setValue("Phone", "");
+        setValue("Email", "");
+    };
 
     return (
-        <div className='form' >
-            <Input style={{ marginBottom: '30px' }} type='text' placeholder=' Full Name' onChange={(e) =>
-                setDetails({ ...details, fullName: e.target.value })} />
+        <form onSubmit={handleSubmit(onSubmit)}>
+            <input
+                {...register("fullName")}
+                type="text"
+                placeholder=' Full Name'
+            />
             <br />
-            <Input style={{ marginBottom: '30px' }} type='text' placeholder='Phone Number' onChange={(e) =>
-                setDetails({ ...details, Phone: e.target.value })} />
+            <input
+                {...register("Phone")}
+                type="text"
+                placeholder=' Phone Number'
+            />
             <br />
-            <Input style={{ marginBottom: '30px' }} type='email' placeholder=' E-mail Address' onChange={(e) =>
-                setDetails({ ...details, email: e.target.value })} />
+            <input
+                {...register("Email")}
+                type="email"
+                placeholder=' E-mail Address'
+            />
             <br />
-            <Button variant='contained' style={{ marginBottom: '20px' }} onClick={PostData}>Submit</Button>
-        </div>
-    )
+            <button type="submit">Submit</button>
+        </form>
+    );
 }
 
-export default PlayerDetailsForm
+export default PlayerDetailsForm;
 
 
 
