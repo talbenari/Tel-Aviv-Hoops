@@ -111,20 +111,24 @@ justify-content: center;
 
   /* .button-placement{
     display: flex;
-  } */
-  
-  @media only screen and (max-width: 600px) {
+  } */  
+
+
+  @media only screen and (max-width: 900px) {
     .rules-display{
-      height: 100vh;
+      height: 130vh;
       
-      justify-content: center;
-      flex-direction: row;
+     
     }
-    .header{
-      font-size: 2.5em;
-    }
+   
     .text{
  font-size: 0.9rem;
     
   }
+  }
+
+  @media only screen and (max-width: 700px) {
+    .header{
+      font-size: 2.5em;
+    }
   }
