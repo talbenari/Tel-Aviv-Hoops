@@ -5,6 +5,10 @@ import { Button, Typography } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { NavLink } from 'react-router-dom';
 import InfoCard from './InfoCard';
+import { Route, Routes } from 'react-router-dom';
+import { useState } from 'react';
+import FullSchedule from './FullSchedule';
+import { blue } from '@mui/material/colors';
 
 
 function Schedule(props) {
@@ -89,17 +93,10 @@ function Schedule(props) {
                 pageSize={8}
                 rowsPerPageOptions={[5]}
             />
-            <div style={{height: 30, width:'100%', position:'absolute',zIndex:2, palette: {
-                primary: {
-                    main: '#bf360c',
-                },
-                secondary: {
-                    main: '#bdbdbd'
-                }
-            },}}>
+            <div style={{height: 33, width:'100%', position:'absolute',zIndex:1, backgroundColor:'#6F6D6C'}}>
             <ThemeProvider theme={theme}>
                 <NavLink to="/fullschedule"> 
-                <Button variant='contained' color='success' >
+                <Button variant='contained' color='info' >
                     <Typography variant='caption'>
                         Full Schedule
                     </Typography>
