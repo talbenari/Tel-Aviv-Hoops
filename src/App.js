@@ -3,8 +3,6 @@ import React from "react";
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
 import Info from "./components/Info";
-
-import GetGamesData from "./components/tableFeatures/GetGamesData";
 import {
   ThemeProvider,
   createTheme,
@@ -13,19 +11,17 @@ import {
 } from "@mui/material";
 import { CenterFocusStrong } from "@mui/icons-material";
 
+import FullSchedule from "./components/tableFeatures/FullSchedule";
+import GetGamesData from "./components/tableFeatures/GetGamesData";
+
 function App() {
+
   return (
     <div className="App">
       <NavBar />
-      <br />
-      <GetGamesData />
-      <br />
+     
+     
       <Footer />
-      {/* <Routes>
-        <Route path="*" element={<NavBar />} />
-        <Route path="*" element={<GetGamesData />} />
-        <Route path="*" element={<Footer />} />    
-      </Routes> */}
     </div>
   );
 }

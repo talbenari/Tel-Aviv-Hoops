@@ -1,15 +1,15 @@
 
-function Map() {
+function Map(props) {
 
 
 
     return (
         <iframe 
         title="myFrame"
-        width="350" 
-        height="300" 
+        width="80%" 
+        height="60%" 
         id="gmap_canvas" 
-        src="https://maps.google.com/maps?q=Rokach%20Blvd%2044%20Parking&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+        src={props.courtSrc} 
         >
         </iframe>
     )

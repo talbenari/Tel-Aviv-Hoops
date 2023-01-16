@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
-import styles from './PlayerDetailsForm.css'
-
+// import styles from './PlayerDetailsForm.css'
+import { Button, Input } from '@mui/material'
 
 const PlayerDetailsForm = () => {
 
@@ -37,16 +37,16 @@ const PlayerDetailsForm = () => {
 
     return (
         <div className='form' >
-            <input type='text' placeholder=' Full name' onChange={(e) =>
+            <Input style={{marginBottom: '30px'}} type='text' placeholder=' Full Name' onChange={(e) =>
                 setDetails({ ...details, fullName: e.target.value })} />
             <br />
-            <input type='text' placeholder='Phone' onChange={(e) =>
+            <Input style={{marginBottom: '30px'}} type='text' placeholder='Phone Number' onChange={(e) =>
                 setDetails({ ...details, Phone: e.target.value })} />
             <br />
-            <input type='email' placeholder=' Email address' onChange={(e) =>
+            <Input style={{marginBottom: '30px'}} type='email' placeholder=' E-mail Address' onChange={(e) =>
                 setDetails({ ...details, email: e.target.value })} />
             <br />
-            <button onClick={PostData}>Submit</button>
+            <Button variant='contained' style={{marginBottom: '20px'}}  onClick={PostData}>Submit</Button>
         </div>
     )
 }

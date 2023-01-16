@@ -2,17 +2,23 @@
 import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import { Button, Typography } from '@mui/material';
-import { createTheme, ThemeProvider, withStyles } from '@mui/material/styles';
+
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import ClearIcon from '@mui/icons-material/Clear';
 import { NavLink } from 'react-router-dom';
 import InfoCard from './InfoCard';
 import styles from './Schedule.css'
 import './infoCard.css';
+
 import { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import FullSchedule from './FullSchedule';
+import './infoCard.css';
 
 
 
 function Schedule(props) {
+    console.log(props.games[0].courtSrc);
 
     const [displayType, setDisplayType] = useState('none');
     const [currentRow, setCurrentRow] = useState();
@@ -40,7 +46,7 @@ function Schedule(props) {
     });
 
     const columns = [
-        { field: 'date', headerName: 'Date', flex: 1, headerClassName: 'title', cellClassName: 'cells' },
+       { field: 'date', headerName: 'Date', flex: 1, headerClassName: 'title', cellClassName: 'cells' },
         { field: 'court', headerName: 'Court', flex: 1, headerClassName: 'title', cellClassName: 'cells' },
         { field: 'time', headerName: 'Time', flex: 1, headerClassName: 'title', cellClassName: 'cells' },
         {
@@ -55,11 +61,12 @@ function Schedule(props) {
                                 </Typography>
                             </Button>
                         </NavLink>
+
                     </ThemeProvider>
                 } else {
                     return <ThemeProvider theme={theme}>
-                        {/* <NavLink to='/card' style={{textDecoration: 'none'}}> */}
                         <Button variant='contained' style={{ width: theme.xs.width }} onClick={() => {
+
                             return <div style={{ alignSelf: 'center', justifySelf: 'center' }}>
                                 <InfoCard />
                             </div>
@@ -70,9 +77,6 @@ function Schedule(props) {
                                 Join Game
                             </Typography>
                         </Button>
-
-                        {/* </NavLink> */}
-
                     </ThemeProvider>
                 }
             }
@@ -87,25 +91,24 @@ function Schedule(props) {
             court: game.court,
             time: `${game.startTime}-${game.endTime}`,
             playersSign: `${game.playersSign}/15`,
-
+            courtSrc: game.courtSrc
         }
     ))
 
-    const newRows = rows.slice(5);
-
-
     return (
-        // <ThemeProvider theme={theme}>
+     // <ThemeProvider theme={theme}>
         <div style={{ height: 400, width: '98%', margin: 'auto', }}>
             <div id='blurryBackGround' style={{ display: `${displayType}`, position: 'absolute', width: '100%', height: '100%' }}>
                 <div style={{ display: `${displayType}`, position: 'absolute', float: 'center' }}>
                     <button onClick={() => setDisplayType('none')}><ClearIcon /></button>
                     <InfoCard court={currentRow && currentRow.court} date={currentRow && currentRow.date} time={currentRow && currentRow.time} players={currentRow && currentRow.playersSign} />
+
                 </div>
             </div>
             <DataGrid
-                rows={newRows}
+                rows={rows}
                 columns={columns}
+
                 // pageSize={5}
                 // rowsPerPageOptions={[5]}
                 getRowSpacing={params => ({
@@ -120,6 +123,29 @@ function Schedule(props) {
 
 
             />
+            <div style={{
+                height: 30, width: '100%', position: 'absolute', zIndex: 2, palette: {
+                    primary: {
+                        main: '#bf360c',
+                    },
+                    secondary: {
+                        main: '#bdbdbd'
+                    }
+                },
+            }}>
+                {/* <ThemeProvider theme={theme}>
+                    <NavLink to="/fullschedule">
+                        <Button variant='contained' color='success' >
+                            <Typography variant='caption'>
+                                Full Schedule
+                            </Typography>
+                        </Button>
+                    </NavLink>
+                </ThemeProvider>
+                <Routes>
+                    <Route path="/fullschedule" element={<FullSchedule></FullSchedule>}></Route>
+                </Routes> */}
+            </div>
         </div>
         // </ThemeProvider>
     );
