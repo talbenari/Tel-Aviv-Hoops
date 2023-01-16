@@ -1,13 +1,22 @@
 .rules-display{ 
     background-image: url(/src/UI/images/244135181_231288082349036_8970351012148601611_n.jpeg);
     opacity: 87%; 
-height: 95vh; width: 100vw;
+
+height: 90vh; width: 100vw;
+
+
 background-repeat: no-repeat;
 background-size: cover;
-
 }
 
 
+.combo{
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+align-items: center;
+}
 
 .header{
  margin-top: 0%; 

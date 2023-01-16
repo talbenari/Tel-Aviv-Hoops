@@ -2,7 +2,6 @@ import React from 'react'
 import { useState } from 'react'
 // import styles from './PlayerDetailsForm.css'
 import { Button, Input } from '@mui/material'
-
 const PlayerDetailsForm = () => {
 
     const [details, setDetails] = useState({
@@ -14,7 +13,7 @@ const PlayerDetailsForm = () => {
     })
 
     const PostData = async (e) => {
-        e.preventDefault()
+        e.preventDefault();
 
         const { fullName, Phone, email, Id } = details;
 
@@ -37,16 +36,16 @@ const PlayerDetailsForm = () => {
 
     return (
         <div className='form' >
-            <Input style={{marginBottom: '20px', width: "130%"}} type='text' placeholder=' Full Name' onChange={(e) =>
+            <Input style={{ marginBottom: '30px' }} type='text' placeholder=' Full Name' onChange={(e) =>
                 setDetails({ ...details, fullName: e.target.value })} />
             <br />
-            <Input style={{marginBottom: '20px', width: "130%"}} type='text' placeholder='Phone Number' onChange={(e) =>
+            <Input style={{ marginBottom: '30px' }} type='text' placeholder='Phone Number' onChange={(e) =>
                 setDetails({ ...details, Phone: e.target.value })} />
             <br />
-            <Input style={{marginBottom: '20px', width: "130%"}} type='email' placeholder=' E-mail Address' onChange={(e) =>
+            <Input style={{ marginBottom: '30px' }} type='email' placeholder=' E-mail Address' onChange={(e) =>
                 setDetails({ ...details, email: e.target.value })} />
             <br />
-            <Button style={{marginBottom: '20px'}}  onClick={PostData}>Submit</Button>
+            <Button variant='contained' style={{ marginBottom: '20px' }} onClick={PostData}>Submit</Button>
         </div>
     )
 }

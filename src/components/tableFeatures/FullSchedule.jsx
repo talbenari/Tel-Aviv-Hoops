@@ -32,6 +32,7 @@ const FullSchedule = () => {
                     startTime: game[1].startTime,
                     endTime: game[1].endTime,
                     court: game[1].court,
+                    courtSrc: game[1].courtSrc,
                     playersSign: game[1].playersSign
                 });
             }
