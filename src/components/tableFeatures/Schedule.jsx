@@ -5,6 +5,10 @@ import { Button, Typography } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { NavLink } from 'react-router-dom';
 import InfoCard from './InfoCard';
+import { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import FullSchedule from './FullSchedule';
+import './infoCard.css';
 
 
 function Schedule(props) {
@@ -36,29 +40,26 @@ function Schedule(props) {
             field: '', width: 150, renderCell: ({ row }) => {
                 if (row.playersSign === '15/15') {
                     return <ThemeProvider theme={theme}>
-                        <NavLink to='/card' style={{textDecoration: 'none'}}>
-                            <Button variant='contained' color='secondary' style={{width: theme.xs.width}}>
-                                <Typography variant='caption'>
-                                    Join Wait-list
-                                </Typography>
-                            </Button>
-                        </NavLink>
+                        <Button variant='contained' color='secondary' style={{ width: theme.xs.width }} onClick={() => {
+                            setDisplayType('flex');
+                            setCurrentRow(row);
+                        }}>
+                            <Typography variant='caption'>
+                                Join Wait-list
+                            </Typography>
+                        </Button>
                     </ThemeProvider>
                 } else {
                     return <ThemeProvider theme={theme}>
-                    {/* <NavLink to='/card' style={{textDecoration: 'none'}}> */}
-                        <Button variant='contained' style={{width: theme.xs.width}} onClick={() => {
-                            return <div style={{position: 'absolute', alignSelf: 'center', justifySelf: 'center'}}>
-                                    <InfoCard/>
-                                </div>
-                            
+                        <Button variant='contained' style={{ width: theme.xs.width }} onClick={() => {
+                            setDisplayType('flex');
+                            setCurrentRow(row);
                         }}>
                             <Typography variant='caption'>
                                 Join Game
                             </Typography>
                         </Button>
-                    {/* </NavLink> */}
-                </ThemeProvider>
+                    </ThemeProvider>
                 }
             }
         }
@@ -89,26 +90,28 @@ function Schedule(props) {
                 pageSize={8}
                 rowsPerPageOptions={[5]}
             />
-            <div style={{height: 30, width:'100%', position:'absolute',zIndex:2, palette: {
-                primary: {
-                    main: '#bf360c',
+            <div style={{
+                height: 30, width: '100%', position: 'absolute', zIndex: 2, palette: {
+                    primary: {
+                        main: '#bf360c',
+                    },
+                    secondary: {
+                        main: '#bdbdbd'
+                    }
                 },
-                secondary: {
-                    main: '#bdbdbd'
-                }
-            },}}>
-            <ThemeProvider theme={theme}>
-                <NavLink to="/fullschedule"> 
-                <Button variant='contained' color='success' >
-                    <Typography variant='caption'>
-                        Full Schedule
-                    </Typography>
-                </Button>
-                </NavLink>
-            </ThemeProvider>
+            }}>
+                {/* <ThemeProvider theme={theme}>
+                    <NavLink to="/fullschedule">
+                        <Button variant='contained' color='success' >
+                            <Typography variant='caption'>
+                                Full Schedule
+                            </Typography>
+                        </Button>
+                    </NavLink>
+                </ThemeProvider>
                 <Routes>
                     <Route path="/fullschedule" element={<FullSchedule></FullSchedule>}></Route>
-                </Routes>
+                </Routes> */}
             </div>
         </div>
     );
