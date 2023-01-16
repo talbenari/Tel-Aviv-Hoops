@@ -4,8 +4,6 @@ import styles from './PlayerDetailsForm.css'
 import { Button, Input } from '@mui/material'
 import { useForm } from "react-hook-form";
 
-
-
 const PlayerDetailsForm = () => {
     const { register, handleSubmit, setValue } = useForm();
 
