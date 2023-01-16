@@ -121,19 +121,8 @@ function Schedule(props) {
 
 
             />
-            <div style={{
-                height: 30, width: '100%', position: 'absolute', zIndex: 2, palette: {
-                    primary: {
-                        main: '#bf360c',
-                    },
-                    secondary: {
-                        main: '#bdbdbd'
-                    }
-                },
-            }}>
-            </div>
+            
         </div>
-        // </ThemeProvider>
     );
 };
 
