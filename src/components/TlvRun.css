@@ -13,20 +13,9 @@ align-items: center;
 justify-content: center;
 opacity: 70%; 
 opacity: 90%; 
-animation: backgroundAnimation 5s ease-in-out infinite;
 }
 
-@keyframes backgroundAnimation {
-    0% {
-      background-position: 0% 0%;
-    }
-    50% {
-      background-position: 100% 0%;
-    }
-    100% {
-      background-position: 0% 0%;
-    }
-  }
+
 
 .heading{
     padding-bottom: 9%;
