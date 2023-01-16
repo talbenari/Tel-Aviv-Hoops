@@ -106,7 +106,6 @@ function Schedule(props) {
                 rowsPerPageOptions={[5]}
             />
         </div >
-
     );
 };
 
