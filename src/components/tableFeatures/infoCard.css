@@ -10,7 +10,6 @@
     height: 100vh;
     top: 0;
     left: 0;
-    transition: ease 1s;
 }
 
 #containerDiv {
@@ -24,5 +23,6 @@
         display: flex;
         flex-direction: column;
         height: fit-content;
+        align-items: center;
     }
 }
