@@ -1,9 +1,7 @@
-.form{
+.form {
     display: flex;
-flex-direction: column;
-justify-content: center;
-width: 15%;
-text-align: center;
-margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
 }
-

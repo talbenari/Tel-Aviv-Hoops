@@ -7,8 +7,6 @@ import { NavLink } from 'react-router-dom';
 import { Route, Routes } from 'react-router-dom';
 import About from '../pages/About';
 import Home from '../pages/Home';
-// import InfoCard from './tableFeatures/InfoCard';
-import InfoCard from './tableFeatures/InfoCard';
 import FullSchedule from './tableFeatures/FullSchedule';
 
 function NavBar() {
