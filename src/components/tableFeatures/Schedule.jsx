@@ -105,8 +105,7 @@ function Schedule(props) {
                 pageSize={8}
                 rowsPerPageOptions={[5]}
             />
-            
-        </div>
+        </div >
     );
 };
 
