@@ -15,13 +15,7 @@ import FullSchedule from "./components/tableFeatures/FullSchedule";
 import GetGamesData from "./components/tableFeatures/GetGamesData";
 
 function App() {
-  // const mainTheme = createTheme({
-  //   typography: {
-  //     color: withTheme,
-  //     fontFamily: "Comic sans Ms",
-  //     fontSize: 40,
-  //   },
-  // });
+
   return (
     <div className="App">
       <NavBar />

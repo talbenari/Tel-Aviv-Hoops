@@ -1,7 +1,6 @@
 
 .title{
     font-size: 2rem;
-
     font-family: Comic sans Ms;
     color: white;
 }
@@ -9,17 +8,18 @@
     font-family: Comic sans Ms;
     color: white;
 }
-.button{
-    font-family: Comic sans Ms;
-}
 
-.table{
-  margin: auto;
-  
-}
+
+
 
 @media screen and (max-width: 600px){
     .title{
-        font-size: 1rem;
+        font-size: 0.8rem;
+    }
+    .cells{
+        font-size: 0.6rem;
+    }
+    Button{
+        font-size: 3rem;
     }
 }
