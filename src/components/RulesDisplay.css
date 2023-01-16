@@ -113,7 +113,7 @@ justify-content: center;
     display: flex;
   } */
   
-  @media only screen and (max-width: 600px) {
+  /* @media only screen and (max-width: 600px) {
     .rules-display{
       height: 100vh;
       
@@ -127,4 +127,24 @@ justify-content: center;
  font-size: 0.9rem;
     
   }
+  } */
+
+
+  @media only screen and (max-width: 900px) {
+    .rules-display{
+      height: 130vh;
+      
+     
+    }
+   
+    .text{
+ font-size: 0.9rem;
+    
+  }
+  }
+
+  @media only screen and (max-width: 700px) {
+    .header{
+      font-size: 2.5em;
+    }
   }
