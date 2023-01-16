@@ -2,9 +2,9 @@ import './Info.css';
 
 const Info = () => {
     return (
-        <div class="container">
-            <div class="stats">
-                <div class="list">
+        <div className="container">
+            <div className="stats">
+                <div className="list">
                     <h1>How It Work's?</h1>
                     <p>EXPLORE OUR SCEDULE</p>
                     <p>BOOK YOUR COURT, DATE AND TIME </p>
@@ -21,7 +21,7 @@ const Info = () => {
 
 
                 </div>
-                <div class="list">
+                <div className="list">
                     <h1>Our Vision</h1>
                     <p>OUR VISION IS TO HOOP ANYDAY
                         WITH MANY PLAYERS' AROUND</p>

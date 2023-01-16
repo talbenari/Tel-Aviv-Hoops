@@ -1,4 +1,4 @@
-import { Button, Toolbar, Typography } from '@mui/material';
+import { Button, Toolbar } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import SportsBasketballIcon from '@mui/icons-material/SportsBasketball';
@@ -8,6 +8,8 @@ import { Route, Routes } from 'react-router-dom';
 import About from '../pages/About';
 import Home from '../pages/Home';
 // import InfoCard from './tableFeatures/InfoCard';
+import InfoCard from './tableFeatures/InfoCard';
+import FullSchedule from './tableFeatures/FullSchedule';
 
 function NavBar() {
 
@@ -34,7 +36,7 @@ function NavBar() {
                     <Stack direction='row' alignItems='center' spacing={3}>
                         <SportsBasketballIcon />
                         <NavLink to="/"><Button variant="text" color='secondary'>Home</Button></NavLink>
-                        <Button variant="text" color='secondary'>Full Schedule</Button>
+                      <NavLink to='/fullschedule'>  <Button variant="text" color='secondary'>Full Schedule</Button></NavLink>
                         <NavLink to="/About"> <Button variant="text" color='secondary'>About</Button></NavLink>
                     </Stack>
                 </Toolbar>
@@ -43,6 +45,7 @@ function NavBar() {
                 {/* <Route path='/card' element={<InfoCard></InfoCard>} /> */}
                 <Route path='/About' element={<About></About>}></Route>
                 <Route path='/' element={<Home></Home>}></Route>
+                <Route path='/fullschedule' element={<FullSchedule></FullSchedule>}></Route>
             </Routes>
 
         </ThemeProvider>
