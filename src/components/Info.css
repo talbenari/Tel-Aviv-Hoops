@@ -3,7 +3,7 @@
     /* position: absolute; */
     border: 4px solid white;
     width: 30vw;
-    height: 55vh;
+    height: 60vh;
     text-align: center;
     color: white;
     margin: 0;
@@ -32,13 +32,16 @@ text-align: center;
      text-align: center;
 }
 @media screen and (max-width: 600px){
-
-
+    /* .stats{
+     font-size: 8rem;
+        display: flex;
+        flex-direction: row;
+    } */
     .list h1{
         font-size: 1.5rem;
         }
         .list {
-            height: 55vh;
+            height: 45vh;
         }
         .list  p{
             font-size: 0.9rem;
