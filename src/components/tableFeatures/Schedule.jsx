@@ -4,14 +4,10 @@ import { DataGrid } from '@mui/x-data-grid';
 import { Button, Typography } from '@mui/material';
 
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import ClearIcon from '@mui/icons-material/Clear';
 import { NavLink } from 'react-router-dom';
 import InfoCard from './InfoCard';
-import styles from './Schedule.css'
-import './infoCard.css';
-
-import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { useState } from 'react';
 import FullSchedule from './FullSchedule';
 import './infoCard.css';
 
@@ -91,7 +87,7 @@ function Schedule(props) {
     ))
 
     return (
-        // <ThemeProvider theme={theme}>
+
         <div style={{ height: 400, width: '98%', margin: 'auto', }}>
             <div id='blurryBackGround' style={{ display: `${displayType}` }}>
                 <div style={{ display: `${displayType}`, position: 'absolute', float: 'center' }}>
@@ -106,23 +102,10 @@ function Schedule(props) {
             <DataGrid
                 rows={rows}
                 columns={columns}
-
-                // pageSize={5}
-                // rowsPerPageOptions={[5]}
-                getRowSpacing={params => ({
-                    top: params.isFirstVisible ? 0 : 5,
-                    bottom: params.isLastVisible ? 0 : 5
-                })}
-
-                hideFooter
-
-
-
-
-
+                pageSize={8}
+                rowsPerPageOptions={[5]}
             />
-            
-        </div>
+        </div >
     );
 };
 
