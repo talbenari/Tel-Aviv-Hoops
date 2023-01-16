@@ -1,8 +1,13 @@
 .tlvruning{
+<<<<<<< HEAD
     background-image: url(../UI/images/Tel-Aviv-Hoops.jpeg);
     background-image: url(/src/UI/images/Tel-Aviv-Hoops.jpeg),
      url(https://www.teahub.io/photos/full/344-3440808_tel-aviv-black-and-white.jpg); 
 height: 100vh; width: 100vw;
+=======
+    background-image: url(/Users/roygutter/Desktop/Full-Stuck/projects/Tel-Aviv-Hoops/src/UI/images/Tel-Aviv-Hoops.jpeg);
+height: 80vh; width: 100vw;
+>>>>>>> 5556931 (styles)
 background-repeat: no-repeat;
 background-size: cover;
 background-position: top;

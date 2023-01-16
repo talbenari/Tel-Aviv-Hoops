@@ -3,9 +3,14 @@ import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import { Button, Typography } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { NavLink } from 'react-router-dom';
+import ClearIcon from '@mui/icons-material/Clear';
+// import { NavLink } from 'react-router-dom';
 import InfoCard from './InfoCard';
-import { Route, Routes } from 'react-router-dom';
+
+import styles from './Schedule.css'
+
+
+import './infoCard.css';
 import { useState } from 'react';
 import FullSchedule from './FullSchedule';
 import { blue } from '@mui/material/colors';
@@ -90,8 +95,11 @@ function Schedule(props) {
             <DataGrid
                 rows={rows}
                 columns={columns}
-                pageSize={8}
-                rowsPerPageOptions={[5]}
+                // pageSize={5}
+                // rowsPerPageOptions={[5]}
+                hideFooterPagination
+                hideFooter
+                disableSelectionOnClick
             />
             <div style={{height: 33, width:'100%', position:'absolute',zIndex:1, backgroundColor:'#6F6D6C'}}>
             <ThemeProvider theme={theme}>
