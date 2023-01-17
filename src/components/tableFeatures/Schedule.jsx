@@ -2,13 +2,9 @@
 import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import { Button, Typography } from '@mui/material';
-
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { NavLink } from 'react-router-dom';
 import InfoCard from './InfoCard';
-import { Route, Routes } from 'react-router-dom';
 import { useState } from 'react';
-import FullSchedule from './FullSchedule';
 import './infoCard.css';
 
 
