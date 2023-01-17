@@ -1,6 +1,4 @@
 import React from 'react'
-import { useState } from 'react'
-import styles from './PlayerDetailsForm.css'
 import { Button, Input } from '@mui/material'
 import { useForm } from "react-hook-form";
 
@@ -24,6 +22,7 @@ const PlayerDetailsForm = () => {
         setValue("fullName", "");
         setValue("Phone", "");
         setValue("Email", "");
+        console.log(res);
     };
 
     return (

@@ -6,7 +6,7 @@ const Info = () => {
         <div className="container">
             <div className="stats">
                 <div className="list">
-                    <h1>How It Work's?</h1>
+                    <h1>How It Works?</h1>
                     <p>EXPLORE OUR SCEDULE</p>
                     <p>BOOK YOUR COURT, DATE AND TIME </p>
                     <p>ARRIVE ON TIME AND HAVE FUN</p>
