@@ -2,6 +2,7 @@ import './Info.css';
 
 const Info = () => {
     return (
+       
         <div className="container">
             <div className="stats">
                 <div className="list">
@@ -31,7 +32,7 @@ const Info = () => {
                 </div>
             </div>
         </div>
-
+       
 
     )
 }

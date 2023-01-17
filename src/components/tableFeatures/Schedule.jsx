@@ -14,7 +14,6 @@ import './infoCard.css';
 
 
 function Schedule(props) {
-    console.log(props.games[0].courtSrc);
 
     const [displayType, setDisplayType] = useState('none');
     const [currentRow, setCurrentRow] = useState();
@@ -77,7 +76,8 @@ function Schedule(props) {
 
     const rows = props.games.map((game, index) => (
         {
-            id: index,
+            row: index,
+            id: game.id,
             date: game.date,
             court: game.court,
             time: `${game.startTime}-${game.endTime}`,
@@ -91,7 +91,9 @@ function Schedule(props) {
         <div style={{ height: 400, width: '98%', margin: 'auto', }}>
             <div id='blurryBackGround' style={{ display: `${displayType}` }}>
                 <div style={{ display: `${displayType}`, position: 'absolute', float: 'center' }}>
+                    {console.log(currentRow && currentRow.id)}
                     <InfoCard setDisplayType={setDisplayType}
+                        id={currentRow && currentRow.id}
                         courtSrc={currentRow && currentRow.courtSrc}
                         court={currentRow && currentRow.court}
                         date={currentRow && currentRow.date}
@@ -107,7 +109,6 @@ function Schedule(props) {
                 hideFooter
             />
         </div >
-
     );
 };
 

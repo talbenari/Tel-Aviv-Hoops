@@ -3,7 +3,7 @@
     /* position: absolute; */
     border: 4px solid white;
     width: 30vw;
-    height: 38vh;
+    height: 41vh;
     text-align: center;
     color: white;
     margin: auto;
@@ -22,7 +22,7 @@ text-align: center;
 }
 .list  p{
 
-    font-size: 1.0rem;
+    font-size: 0.9rem;
 
 
     text-align: center;
@@ -35,9 +35,19 @@ text-align: center;
      text-align: center;
      height: 40vh;
 }
-@media screen and (max-width: 600px){
 
-
+@media screen and (max-width: 840px){
+    .stats{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .container{
+        height: 120vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     .list h1{
         font-size: 1.5rem;
         }
@@ -51,7 +61,19 @@ text-align: center;
             
         }
         .list  p{
-            font-size: 0.7rem;
+            font-size: 0.75rem;
         }
 
+}
+
+@media screen and (max-width: 650px){
+    .list  p{
+        font-size: 0.6rem;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .list  p{
+        font-size: 0.5rem;
+    }
 }

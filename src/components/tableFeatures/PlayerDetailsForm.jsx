@@ -4,8 +4,6 @@ import styles from './PlayerDetailsForm.css'
 import { Button, Input } from '@mui/material'
 import { useForm } from "react-hook-form";
 
-
-
 const PlayerDetailsForm = () => {
     const { register, handleSubmit, setValue } = useForm();
 
@@ -30,25 +28,28 @@ const PlayerDetailsForm = () => {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
-            <input
+            <Input
+                style={{ marginBottom: '20px' }}
                 {...register("fullName")}
                 type="text"
                 placeholder=' Full Name'
             />
             <br />
-            <input
+            <Input
+                style={{ marginBottom: '20px' }}
                 {...register("Phone")}
                 type="text"
                 placeholder=' Phone Number'
             />
             <br />
-            <input
+            <Input
+                style={{ marginBottom: '20px' }}
                 {...register("Email")}
                 type="email"
                 placeholder=' E-mail Address'
             />
             <br />
-            <button type="submit">Submit</button>
+            <Button variant='contained' type="submit">Submit</Button>
         </form>
     );
 }

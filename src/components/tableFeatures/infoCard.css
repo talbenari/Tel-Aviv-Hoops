@@ -15,10 +15,16 @@
 #containerDiv {
     display: flex;
     flex-direction: row;
+<<<<<<< HEAD
     height: 55vh;
     color: white;
     background-color: grey;
+=======
+    height: 60vh;
+    padding-left: 20px;
+>>>>>>> master
 }
+
 
 @media only screen and (max-width: 768px) {
     #containerDiv {
@@ -26,5 +32,10 @@
         flex-direction: column;
         height: fit-content;
         align-items: center;
+    }
+
+    #containerDiv button#X{
+        width: 90%;
+        margin-top: 20px;
     }
 }
