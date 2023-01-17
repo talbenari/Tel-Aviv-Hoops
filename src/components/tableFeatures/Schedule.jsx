@@ -104,6 +104,7 @@ function Schedule(props) {
                 columns={columns}
                 pageSize={8}
                 rowsPerPageOptions={[5]}
+                hideFooter
             />
         </div >
 

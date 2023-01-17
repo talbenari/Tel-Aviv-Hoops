@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Schedule from "./Schedule";
 
+
 const GetGamesData = () => {
     const [games, setGames] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
@@ -13,6 +14,7 @@ const GetGamesData = () => {
             const response = await fetch(
                 "https://react-http-e4063-default-rtdb.europe-west1.firebasedatabase.app/Games.json"
             );
+
 
             if (!response.ok) {
                 throw new Error("Somthing went wrong!");

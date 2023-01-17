@@ -9,15 +9,18 @@ function InfoCard(props) {
 
 
     return (
-        <Card style={{ width: 'fit-content', height: 'fit-content', paddingLeft: '20px', paddingBottom: '20px'}}>
+        <Card style={{ width: 'fit-content', height: 'fit-content', paddingBottom: '20px' }}>
+            {/* <div id='cardTop'>
+                <Typography variant='h2' fontFamily={'arial'}>
+                    game details
+                </Typography>
+                <Button color='error' style={{ height: '10%', zIndex: '2', float: 'right' }} onClick={() => props.setDisplayType('none')}><ClearIcon /></Button>
+            </div> */}
             <div id='containerDiv'>
                 <div style={{ paddingTop: '20px', justifyContent: 'flex-start' }}>
                     <div>
-                        <Typography variant='h6'>
-                            game detailes
-                        </Typography>
                         <Typography variant='subtitle1'>
-                            <ul style={{ paddingLeft: '15px' }}>
+                            <ul style={{ paddingLeft: '15px', width: 'fit-content' }}>
                                 <li>court: {props.court}</li>
                                 <li>date: {props.date}</li>
                                 <li>time: {props.time}</li>
@@ -28,13 +31,13 @@ function InfoCard(props) {
                     {console.log(props.courtSrc)}
                     <Map courtSrc={props.courtSrc} />
                 </div>
-                <div style={{ marginTop: '12%', paddingRight: '20px', alignItems: 'center', justifyContent: 'center' }}>
+                <div style={{ marginTop: '20px', paddingRight: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
                     <Typography variant='h5' fontFamily={'monospace'} style={{ marginBottom: '20px', textDecoration: 'underline' }}>
                         Sign up now!
                     </Typography>
                     <PlayerDetailsForm />
                 </div>
-                <Button color='error' style={{ height: '10%' }} onClick={() => props.setDisplayType('none')}><ClearIcon /></Button>
+                <Button id='X' style={{ height: '10%' }} onClick={() => props.setDisplayType('none')}><ClearIcon /></Button>
             </div>
         </Card>
     )

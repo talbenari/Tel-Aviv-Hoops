@@ -9,6 +9,8 @@ import { useForm } from "react-hook-form";
 const PlayerDetailsForm = () => {
     const { register, handleSubmit, setValue } = useForm();
 
+
+
     const onSubmit = async data => {
 
         const res = await fetch("https://tlv-hoops-inputs-default-rtdb.europe-west1.firebasedatabase.app/PlayersData.json",
@@ -19,6 +21,8 @@ const PlayerDetailsForm = () => {
                 },
                 body: JSON.stringify({ ...data, Id: Math.random() })
             })
+
+
         setValue("fullName", "");
         setValue("Phone", "");
         setValue("Email", "");

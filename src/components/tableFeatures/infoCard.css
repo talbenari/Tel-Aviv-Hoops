@@ -16,6 +16,8 @@
     display: flex;
     flex-direction: row;
     height: 55vh;
+    color: white;
+    background-color: grey;
 }
 
 @media only screen and (max-width: 768px) {
