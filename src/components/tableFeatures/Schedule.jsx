@@ -28,6 +28,9 @@ function Schedule(props) {
             },
             secondary: {
                 main: '#bdbdbd'
+            },
+            gridColor: {
+                main: '#424242'
             }
         },
         xs: {
@@ -98,6 +101,7 @@ function Schedule(props) {
                 </div>
             </div>
             <DataGrid
+                style={{ color: theme.typography.textColor, background: theme.palette.gridColor.main }}
                 rows={rows}
                 columns={columns}
                 pageSize={8}
