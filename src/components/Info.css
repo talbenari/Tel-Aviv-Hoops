@@ -66,9 +66,14 @@ text-align: center;
 
 }
 
-@media screen and (max-width: 650px){
+@media screen and (max-width: 768px){
     .list  p{
         font-size: 0.6rem;
+    }
+    .list {
+        width: 60vw;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 }
 
