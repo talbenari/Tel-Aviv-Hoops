@@ -116,9 +116,9 @@ justify-content: center;
 
   @media only screen and (max-width: 900px) {
     .rules-display{
-      height: 130vh;
-      
-     
+      height: 105vh;
+      padding-top: 5vh;
+    
     }
    
     .text{

@@ -15,14 +15,11 @@
 #containerDiv {
     display: flex;
     flex-direction: row;
-<<<<<<< HEAD
-    height: 55vh;
-    color: white;
-    background-color: grey;
-=======
-    height: 60vh;
+
+    height: 50vh;
     padding-left: 20px;
->>>>>>> master
+    ;
+
 }
 
 

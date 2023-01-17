@@ -43,7 +43,7 @@ text-align: center;
         
     }
     .container{
-        height: 120vh;
+        height: 80vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -80,5 +80,8 @@ text-align: center;
 @media screen and (max-width: 450px){
     .list  p{
         font-size: 0.5rem;
+    }
+    .container{
+        height: 90vh;
     }
 }

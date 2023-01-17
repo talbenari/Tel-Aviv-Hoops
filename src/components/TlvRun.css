@@ -19,13 +19,15 @@
 
 
 .heading {
-  padding-bottom: 9%;
-  font-size: 5rem;
-  font-weight: 600;
+  padding-bottom: 15%;
+  font-size: 6rem;
+  font-weight: 800;
   /* transform: rotate(8deg); */
-  color: WHITE
+  color: white;
 }
-
+.tlvruning{
+  height: 87vh;
+}
 @media only screen and (max-width: 768px) {
   .tlvruning {
     height: 65vh;
