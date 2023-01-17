@@ -1,13 +1,22 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { Button, Input } from '@mui/material'
 import { useForm } from "react-hook-form";
+import emailjs from '@emailjs/browser';
 
-const PlayerDetailsForm = () => {
+const PlayerDetailsForm = (props) => {
     const { register, handleSubmit, setValue } = useForm();
 
 
+    const form = useRef();
 
     const onSubmit = async data => {
+
+        emailjs.sendForm('service_5642dib', 'template_5iemp4h', form.current, 'IU5Tpj9smdI_hVVqI')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
 
         const res = await fetch("https://tlv-hoops-inputs-default-rtdb.europe-west1.firebasedatabase.app/PlayersData.json",
             {
@@ -26,9 +35,13 @@ const PlayerDetailsForm = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form ref={form} onSubmit={handleSubmit(onSubmit)}>
+            <input style={{display: 'none'}} value={props.court} name='court' type="text" />
+            <input style={{display: 'none'}} value={props.time} name='time' type="text" />
+            <input style={{display: 'none'}} value={props.date} name='date' type="text" />
             <Input
                 style={{ marginBottom: '20px' }}
+                name="fullName"
                 {...register("fullName")}
                 type="text"
                 placeholder=' Full Name'
@@ -43,6 +56,7 @@ const PlayerDetailsForm = () => {
             <br />
             <Input
                 style={{ marginBottom: '20px' }}
+                name='Email'
                 {...register("Email")}
                 type="email"
                 placeholder=' E-mail Address'

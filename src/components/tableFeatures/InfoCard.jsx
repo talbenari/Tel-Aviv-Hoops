@@ -10,12 +10,6 @@ function InfoCard(props) {
 
     return (
         <Card style={{ width: 'fit-content', height: 'fit-content', paddingBottom: '20px' }}>
-            {/* <div id='cardTop'>
-                <Typography variant='h2' fontFamily={'arial'}>
-                    game details
-                </Typography>
-                <Button color='error' style={{ height: '10%', zIndex: '2', float: 'right' }} onClick={() => props.setDisplayType('none')}><ClearIcon /></Button>
-            </div> */}
             <div id='containerDiv'>
                 <div style={{ paddingTop: '20px', justifyContent: 'flex-start' }}>
                     <div>
@@ -35,7 +29,11 @@ function InfoCard(props) {
                     <Typography variant='h5' fontFamily={'monospace'} style={{ marginBottom: '20px', textDecoration: 'underline' }}>
                         Sign up now!
                     </Typography>
-                    <PlayerDetailsForm />
+                    <PlayerDetailsForm
+                        court={props.court}
+                        time={props.time}
+                        date={props.date}
+                    />
                 </div>
                 <Button id='X' style={{ height: '10%' }} onClick={() => props.setDisplayType('none')}><ClearIcon /></Button>
             </div>
