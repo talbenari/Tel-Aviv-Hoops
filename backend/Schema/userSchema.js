@@ -4,9 +4,11 @@ const user_schema = mongoose.Schema({
   name: { type: String, required: true },
   password: { type: String, required: true },
   email: { type: String, required: true },
-  role: { type: String, required: true, default: "reviewer" },
-  approved_apartments: { type: Array, required: false },
-  save_apartments: { type: Array, required: false },
+  role: {type: String, default:"user" },
+  birthDay: { type: String, required: true },
+  town:{ type: String, required: true },
+  height: { type: userSchema.js, required: true },
+  rank: { type: String, required: true }
 });
 
-module.exports = mongoose.model("apartNetUsers", user_schema);
+module.exports = mongoose.model("tlv_hoopsUsers", user_schema);
