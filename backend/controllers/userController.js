@@ -49,44 +49,4 @@ module.exports = {
         });
       });
   },
-  AddToFavorites: (req, res) => {
-    const { apartmentId, userId } = req.body;
-    let checkifexist = false;
-
-    userSchem.findOne({ _id: userId }).then((user) => {
-      console.log(user);
-      user?.save_apartments.map((apartment) => {
-        console.log(apartment);
-        if (apartment === apartmentId) {
-          checkifexist = true;
-        }
-      });
-      if (checkifexist === false) {
-        user?.save_apartments.push(apartmentId);
-        user.save().then();
-        res.status(200).json({
-          message: true,
-        });
-      } else {
-        res.status(200).json({
-          message: false,
-        });
-      }
-      console.log(user?.save_apartments);
-    });
-  },
-  Favorites: async (req, res) => {
-    const { userId } = req.body;
-    const array = [{}];
-    const user = await userSchem.findOne({ _id: userId });
-    if (user?.save_apartments) {
-      const myApartments = await apartSchem.find({
-        _id: { $in: user.save_apartments },
-      });
-      res.status(200).json({
-        favorites: myApartments,
-      });
-      console.log(myApartments);
-    }
-  },
 };
