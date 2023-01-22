@@ -1,5 +1,5 @@
 import './RulesDisplay.css'
-
+//needs to recreate the function with map and json data
 
 function RulesDisplay() {
     return (

@@ -1,9 +1,9 @@
 const userSchem = require("../Schema/userSchema");
-const apartSchem = require("../Schema/apartmentSchema");
+
 
 module.exports = {
   CreateUser: (req, res) => {
-    const { name, password, email } = req.body;
+    const { name, password, email, birthDay, town,height } = req.body;
     userSchem.findOne({ email: email }).then((users) => {
       console.log(users);
       if (users == null) {
@@ -11,6 +11,9 @@ module.exports = {
           name,
           password,
           email,
+          birthDay,
+          town,
+          height,
         });
         user.save().then(() => {
           res.status(200).json({

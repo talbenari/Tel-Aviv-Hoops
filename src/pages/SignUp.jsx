@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+// replace useForm with useStates and send an axios request
 
 function SignupForm() {
   const { register, handleSubmit, errors } = useForm();

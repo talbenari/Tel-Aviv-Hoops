@@ -9,8 +9,6 @@ import './footer.css';
 
 function Footer() {
 
-
-
     const theme = createTheme({
         typography: {
             fontFamily: 'Comic sans Ms'
