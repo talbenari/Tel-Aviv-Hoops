@@ -30,6 +30,7 @@ export const userSlice = createSlice({
             state.role = info.payload.role
             state.id = info.payload.id
             state.email = info.payload.email
+            console.log(state.name)
         }
     },
 })

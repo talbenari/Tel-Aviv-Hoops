@@ -1,4 +1,4 @@
-import {configureStore} from '@reduxjs/toolkit'
+import {configureStore, getDefaultMiddleware} from '@reduxjs/toolkit'
 import themeSlice from "./themeSlice";
 import userSlice from "./userSlice";
 
@@ -8,5 +8,8 @@ export default configureStore({
         theme: themeSlice,
         userData: userSlice,
     },
+    middleware: getDefaultMiddleware({
+        serializableCheck: false,
+    }),
 })
 

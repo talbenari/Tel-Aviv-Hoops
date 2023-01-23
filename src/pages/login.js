@@ -25,20 +25,30 @@ export default function Login() {
     const [userData, setUserData] = useState();
     const theme = useSelector((state) => state.theme)
     const dispatch = useDispatch()
+    let data = null
 
     async function Handler(e) {
         e.preventDefault()
-        //need to state
         const res = await axios.post("http://localhost:2000/login", {
             email,
             password,
         });
-        setUserData(res.data.id);
-        dispatch(setAll(res.data))
+        setUserData(res.data);
+        data = res.data
+        console.log(data)
         setRole(res.data.role)
-
+        next()
         // navigate("/main");
     }
+
+    function next() {
+        if (data) {
+            dispatch(setAll(data))
+            navigate("/")
+        }
+        console.log(data)
+    }
+
 
     return (
         <div>

@@ -1,21 +1,23 @@
 import * as React from 'react';
 import {useEffect, useState} from 'react';
 import {DataGrid} from '@mui/x-data-grid';
-import {Button, Typography} from '@mui/material';
+import {Button, Card, Typography} from '@mui/material';
 import {createTheme, ThemeProvider} from '@mui/material/styles';
-import InfoCard from './InfoCard';
-import './infoCard.css';
+
 import {useNavigate} from "react-router-dom";
 import axios from "axios";
+import TextField from "@mui/material/TextField";
 
 
 function Schedule(props) {
-
+    const [players_capacity, setPlayers_capacity] = useState()
+    const [name, setName] = useState()
+    const [eventDate, setEventDate] = useState()
+    const [message, setMessage] = useState("")
     const [displayType, setDisplayType] = useState('none');
     const [currentRow, setCurrentRow] = useState();
-
+    const [currentId, setCurrentId] = useState();
     const [courts, setCourts] = useState("")
-
     const navigate = useNavigate();
     const theme = createTheme({
         typography: {
@@ -40,6 +42,20 @@ function Schedule(props) {
 
         }
     });
+
+    function RegEvent() {
+        console.log('hey')
+        console.log(currentRow._id)
+        axios.post("http://localhost:2000/addevent", {
+            courtId: currentRow._id,
+            players: players_capacity,
+            numberOfPlayers: 0,
+            date: eventDate
+        }).then((res) => {
+            console.log(res.data)
+        })
+    }
+
     useEffect(() => {
         axios.get("http://localhost:2000/courtmap").then((res) => {
             console.log(res.data.message)
@@ -83,6 +99,7 @@ function Schedule(props) {
                                 onClick={() => {
                                     setDisplayType('flex');
                                     setCurrentRow(row);
+
                                 }}>
                             <Typography variant='caption'>
                                 Wait-list
@@ -111,6 +128,7 @@ function Schedule(props) {
     courts.length > 0 ? courts.map((court, index) => {
         return rows.push({
             capacity: court.players_capacity,
+            _id: court._id,
             id: index,
             Postdate: court.Postdate,
             town: court.town,
@@ -122,13 +140,50 @@ function Schedule(props) {
         <div style={{height: 400, width: '98%', margin: 'auto',}}>
             <div id='blurryBackGround' style={{display: `${displayType}`}}>
                 <div style={{display: `${displayType}`, position: 'absolute', float: 'center'}}>
-                    <InfoCard setDisplayType={setDisplayType}
-                              id={currentRow && currentRow._id}
-                              courtSrc={currentRow && currentRow.courtSrc}
-                              court={currentRow && currentRow.court}
-                              date={currentRow && currentRow.date}
-                              time={currentRow && currentRow.time}
-                              players={currentRow && currentRow.playersSign}/>
+                    <Card sx={{maxWidth: 500}}>
+                        <TextField
+                            margin="normal"
+                            required
+                            fullWidth
+                            name="town"
+                            label="name"
+                            type="town"
+                            id="town"
+                            onChange={e => setName(e.target.value)}/>
+                        <TextField
+                            margin="normal"
+                            required
+                            fullWidth
+                            id="player capacity"
+                            label="player capacity"
+                            name="playercapacity"
+                            type={"number"}
+                            autoComplete="email"
+                            autoFocus
+                            onChange={e => setPlayers_capacity(e.target.value)}
+                        />
+
+                        <TextField
+                            margin="normal"
+                            required
+                            fullWidth
+                            name="address"
+                            label="Date"
+                            type=""
+                            id="address"
+                            onChange={e => setEventDate(e.target.value)}
+                        />
+
+
+                        <Button
+                            onClick={RegEvent}
+                            fullWidth
+                            variant="contained"
+                            sx={{mt: 3, mb: 2}}
+                        >
+                            Register Court
+                        </Button>
+                    </Card>
                 </div>
             </div>
             <DataGrid

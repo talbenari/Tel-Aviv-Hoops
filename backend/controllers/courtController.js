@@ -1,10 +1,10 @@
-const courtSchema = require("../Schema/userSchema");
-
+const courtSchema = require("../Schema/courtSchema");
+const {v4: uuidv4} = require('uuid');
 
 module.exports = {
     CreateCourt: (req, res) => {
-        const { players_capacity, town, Postdate, name, courtOwner,address } = req.body;
-        courtSchema.findOne({ name: name }).then((court) => {
+        const {players_capacity, town, Postdate, name, courtOwner, address} = req.body;
+        courtSchema.findOne({name: name}).then((court) => {
             console.log(court);
             if (court == null) {
                 const court = new courtSchema({
@@ -13,7 +13,8 @@ module.exports = {
                     Postdate,
                     name,
                     courtOwner,
-                    address
+                    address,
+
                 });
                 court.save().then(() => {
                     res.status(200).json({
@@ -26,21 +27,61 @@ module.exports = {
                     message: "Sorry, Court Taken",
                 });
             }
-        });
+        })
     },
     AddEvent: (req, res) => {
         const {courtId, players, date, numberOfPlayers} = req.body;
         courtSchema
             .findOne({_id: courtId})
             .then((court) => {
+
                 court.events.unshift({
-                        id, //needs to generate id
+                        id: uuidv4(),
                         players,
                         date,
-                    numberOfPlayers
+                        numberOfPlayers
                     }
                 )
+                court.save()
+                res.status(200).json({
+                    message: "added!",
+                    id: this.id
+                })
             })
-    } // add print all courts
+    },
+    CourtPrint: (req, res) => {
+        courtSchema
+            .find()
+            .then((court) => {
+                res.status(200).json({
+                    message: court
+                })
+
+            })
+    },
+    EventPrint: (req, res) => {
+        const {courtId} = req.body;
+        let data = []
+        courtSchema
+            .findOne({_id: courtId})
+            .then((court) => {
+                try {
+                    court.events.map((singleevent) => {
+                            data.push(singleevent)
+                        }
+                    )
+                    res.status(200).json({
+                        court: court,
+                        events: data
+                    })
+                } catch (err) {
+                    res.status(400).json({
+                        message: err,
+                    })
+                }
+
+            })
+
+    }
 
 }

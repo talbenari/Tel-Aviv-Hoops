@@ -39,6 +39,7 @@ module.exports = {
                         id: users._id,
                         name: users.name,
                         role: users.role,
+                        email: users.email
                     });
                 }
                 console.log(users);
