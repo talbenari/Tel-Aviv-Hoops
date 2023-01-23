@@ -6,7 +6,7 @@ const port = process.env.PORT || 2000;
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const users = require("./views/user");
-const apartment = require("./views/apartment");
+const court = require("./views/court");
 
 // mongo connection
 mongoose.set("strictQuery", true);
@@ -26,7 +26,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors({ origin: " http://localhost:3000" }));
 app.use("/", users);
-app.use("/", apartment);
+app.use("/", court);
 
 http.listen(port, () => {
   console.log(` running at http://localhost:${port}/`);

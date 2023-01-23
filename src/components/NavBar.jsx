@@ -1,15 +1,18 @@
-import { Button, Toolbar } from '@mui/material';
+import {Button, Toolbar} from '@mui/material';
 import AppBar from '@mui/material/AppBar';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import {createTheme, ThemeProvider} from '@mui/material/styles';
 import SportsBasketballIcon from '@mui/icons-material/SportsBasketball';
-import { Stack } from '@mui/system';
-import { NavLink } from 'react-router-dom';
-import { Route, Routes } from 'react-router-dom';
-import About from '../pages/About';
-import Home from '../pages/Home';
-import FullSchedule from './tableFeatures/FullSchedule';
+import {Stack} from '@mui/system';
+import {NavLink, Route, Routes} from 'react-router-dom';
+import Login from "../pages/login";
+import Signup from "../pages/signup";
+import About from "../pages/About";
+import Home from "../pages/Home";
+import FullSchedule from "./tableFeatures/FullSchedule";
+import React from "react";
 
-function NavBar() {
+
+function NavBar({children}) {
 
     const theme = createTheme({
         typography: {
@@ -22,8 +25,6 @@ function NavBar() {
             secondary: {
                 main: '#fff'
             }
-
-
         },
     });
 
@@ -32,15 +33,18 @@ function NavBar() {
             <AppBar position="fixed">
                 <Toolbar>
                     <Stack direction='row' alignItems='center' spacing={3}>
-                        <SportsBasketballIcon />
+                        <SportsBasketballIcon/>
                         <NavLink to="/"><Button variant="text" color='secondary'>Home</Button></NavLink>
-                      <NavLink to='/fullschedule'>  <Button variant="text" color='secondary'>Full Schedule</Button></NavLink>
+                        <NavLink to='/fullschedule'> <Button variant="text" color='secondary'>Full
+                            Schedule</Button></NavLink>
                         <NavLink to="/About"> <Button variant="text" color='secondary'>About</Button></NavLink>
                     </Stack>
                 </Toolbar>
+
             </AppBar>
             <Routes>
-                {/* <Route path='/card' element={<InfoCard></InfoCard>} /> */}
+                <Route path='/login' element={<Login></Login>}/>
+                <Route path='/signup' element={<Signup></Signup>}/>
                 <Route path='/About' element={<About></About>}></Route>
                 <Route path='/' element={<Home></Home>}></Route>
                 <Route path='/fullschedule' element={<FullSchedule></FullSchedule>}></Route>
